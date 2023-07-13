@@ -1,10 +1,9 @@
 import { describe } from "node:test";
-import { minn , maxx , avg } from "../src/index"
+import { maxx  } from "../src/index"
 
 describe ("text maxx", () => {
 
     test ("empty array should thow error", () => {
-        console.log("test max 1")
         expect (() => {
             maxx([])
         }).toThrow()
@@ -12,12 +11,19 @@ describe ("text maxx", () => {
     })
 
     test ("array with single element should return that element", () => {
-        console.log("text 1")
+        expect(maxx([1])).toEqual(1)
     })
 
     test ("should return max in array", () => {
-        console.log("text 2")
+        const tests: [number[],number][] = [
+        [[1, 2, 3], 3],
+      [[-1, -2], -1],
+      [[7, 8, 1], 8],
+    ] 
+    tests.forEach((test) => {
+        const [input, expected] = test
+        expect(maxx(input)).toEqual(expected)
     })
-
+    })
 })
 
