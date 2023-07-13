@@ -11,8 +11,8 @@ jobs:
   test:
     name: Test TypeScript code
     runs-on: "macos-latest"
-    steps : 
-     - uses : actions/checkout@v3
-     -uses : actions/setup-node@v3
-     -run : npm i
-     -run : npx jest
+    steps: 
+     -uses: actions/checkout@v3
+     -uses: actions/setup-node@v3
+     -run: npm i
+     -run: npx jest
