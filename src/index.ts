@@ -1,6 +1,6 @@
 // max(number[]) : number
 export function maxx(numbers : number[]) : number {
-    let maxx = numbers[1]
+    let maxx = numbers[0]
     numbers.forEach( n => { if (n > maxx) {
             maxx = n
         }
@@ -13,7 +13,7 @@ export function maxx(numbers : number[]) : number {
 
 //min(number[]) : number
 export function minn(numbers : number[]) : number {
-    let minn = numbers[1]
+    let minn = numbers[0]
     numbers.forEach( n => { if (n < minn) {
             minn = n
         }
