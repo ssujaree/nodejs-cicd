@@ -32,4 +32,5 @@ export function avg (numbers : number[]) : number {
     } 
     
     return sum / numbers.length
+    
 }
